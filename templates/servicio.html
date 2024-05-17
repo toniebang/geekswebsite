@@ -1,0 +1,86 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<div id="loading-overlay">
+    <div class="loader"></div>
+</div>
+    <div class="page-title parallax  position-relative clearfix" style="background-image: url('{{servicio.portada.url}}'); object-fit: cover;">
+        <div class="section-overlay" ></div>
+        <div class="container" >
+            <div class="breadcrumbs position-relative" >
+                <div class="breadcrumbs-wrap">
+                    <h1 class="title">{{servicio.nombre}}</h1>
+                    <ul class="breadcrumbs-inner">
+                        <li><a >Innovación Constante</a></li>
+                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- page-title -->
+    <div class="blog-content no-column flat-row clearfix">
+        <div class="container d-lg-flex">
+            <div class="col-left">
+                <article class="main-post">
+                    <div class="featured-post">
+                        <div class="entry-image">
+                            <img src="{{servicio.portada.url}}" alt="images">
+                        </div>
+                    </div>
+                    <div class="content-blog content-blog-single">
+                       
+                        <h2 class="title"><a href="#">{{servicio.nombre}} con Geeks </a></h2>
+                       {{servicio.contenido|safe}}
+                        <blockquote>
+                            Buscamos constantemente alcanzar los más altos estándares de calidad y excelencia en
+                            todo lo que hacemos.                   </blockquote>
+                       
+                        <p>
+                            Actuamos con honestidad, transparencia y ética en todas nuestras interacciones con
+                            clientes, empleados y socios comerciales. Mantenemos la confianza y el respeto de quienes nos
+                            rodean mediante una conducta íntegra y responsable.                        </p>
+                       
+                    
+                        <div class="navigation">
+                            <ul class="nav-links">
+                                
+                                <li class="next">
+                                    <div class="meta-nav">Siguiente</div>
+                                    <div class="name-nav"><a href="{% url 'servicio' next.slug %}" style="font-size: 25px;">{{next.nombre}}</a></div>
+                                    
+                                </li>
+                            </ul>
+                        </div><!-- navigation -->
+                    </div>
+                </article><!-- main-post -->
+            </div>
+            
+
+            <div class="col-right">
+                <div class="sidebar">
+                  
+                    <div class="widget widget-category widget-bg">
+                        <h2 class="widget-title">Otros Servicios</h2>
+                        <ul class="category-wrap">
+                            {% for servicio in servicios %}
+                            <li>
+                                <div class="block-inside border-corner hv-background-before">
+                                    <a href="{% url 'servicio' servicio.slug %}">{{servicio.nombre}}</a>
+                                </div>
+                            </li>
+
+                            {% endfor %}
+                            
+                        </ul>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div><!-- blog-content -->
+    
+{% endblock content %}

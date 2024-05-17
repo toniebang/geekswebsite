@@ -1,0 +1,689 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geeks</title>
+
+    <!-- Mobile Specific Metas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="{% static 'stylesheet/bootstrap.css' %}">
+
+    <!-- Template Style-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'stylesheet/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheet/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheet/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheet/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheet/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheet/jquery-fancybox.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheet/style.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheet/shortcodes.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheet/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheet/flexslider.css' %}">
+    <link rel="stylesheet" href="{% static 'rev-slider/css/layers.css' %}">
+    <link rel="stylesheet" href="{% static 'rev-slider/css/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'rev-slider/css/settings.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  
+
+    <link href="{ % static 'icon/icongeeks.png' %}" rel="shortcut icon">
+</head>
+
+<body class="counter-scroll">
+    
+
+
+    <div class="top-bar top-bar-type1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-12 d-lg-flex align-items-center">
+                    <ul class="flat-information flat-information-type1">
+                        {% for i in info %}
+                        <li class="phone"><a href="tel:{{i.telefono}}" title="Phone">{{i.telefono}}</a></li>
+                        <li class="email"><a href="mailto:{{i.email}}" title="Email">{{i.email}} &nbsp;<img src="{% static 'icon/equatorial-guinea.png' %}" alt="" style="width: 30px; height: 30px;"></a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-4 col-12 d-flex justify-content-md-end justify-content-center">
+                   
+                </div>
+            </div>
+        </div>
+    </div><!-- top-bar -->
+      <!-- Modal -->
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Enfoque Personalizado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    Nos comprometemos a comprender las necesidades únicas de cada
+                    cliente y a ofrecer soluciones personalizadas que se adapten a sus objetivos y desafíos específicos.
+                    Nuestra capacidad para adaptarnos a las necesidades individuales de cada cliente nos distingue y
+                    nos permite ofrecer resultados sobresalientes.
+                </div>
+
+                <div class="modal-footer flat-appointment btn-linear hv-linear-gradient">                
+                <button type="button" class="btn font-style linear-color border-corner" class="close" data-dismiss="modal" aria-label="Close">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Modal -->
+
+    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Equipo Multidisciplinario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    Contamos con un equipo altamente calificado y
+                    experimentado de profesionales en diversas áreas, incluyendo desarrollo de software, diseño
+                    web, marketing digital, análisis de datos y seguridad informática. Esta diversidad de talento nos
+                    permite abordar proyectos complejos de manera integral y proporcionar soluciones integradas de
+                    alta calidad.
+                </div>
+
+                <div class="modal-footer flat-appointment btn-linear hv-linear-gradient">                
+                <button type="button" class="btn font-style linear-color border-corner" class="close" data-dismiss="modal" aria-label="Close">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Modal -->
+
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Versatilidad Tecnológica y Multilenguaje</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    En Geeks entendemos que cada proyecto es único y requiere un enfoque personalizado. Es por eso que nuestro equipo 
+                    de expertos está capacitado en una amplia gama de tecnologías y lenguajes de programación para ofrecer soluciones a medida que se 
+                    ajusten perfectamente a tus necesidades. Nuestras Capacidades Tecnológicas Incluyen HTML5, CSS3, JavaScript, y frameworks como React, 
+                    Angular, y Vue.js. Para el desarrollo móvil, dominamos tanto las plataformas nativas (iOS y Android) como el desarrollo multiplataforma 
+                    con Flutter y React Native.Backend Sólido y Escalable: Diseñamos y desarrollamos backends eficientes y seguros utilizando lenguajes como 
+                    Python, Node.js y PHP.
+                </div>
+
+                <div class="modal-footer flat-appointment btn-linear hv-linear-gradient">                
+                <button type="button" class="btn font-style linear-color border-corner" class="close" data-dismiss="modal" aria-label="Close">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- modal -->
+    <header id="header" class="header header-type1 bg-header-s1 bg-color">
+        <div class="container">
+            <div class="flex-header d-flex">
+                <div id="logo" class="logo d-flex align-items-center justify-content-start">
+                    <a href="{% url 'inicio' %}" title="Logo"><img src="{% static 'images/logo/01.png' %}" data-width="168" data-height="38" alt="images" data-retina="{% static 'images/logo/01@2x.png' %}"></a>
+                </div>
+                <div class="content-menu d-flex align-items-center justify-content-end">
+                    <div class="nav-wrap">
+                        <div class="btn-menu"><span></span></div>
+                        <nav id="mainnav" class="mainnav">
+                            <ul class="menu">
+                                <li>
+                                    <a href="{% url 'inicio' %}" class="active">Inicio</a>
+                                    
+                                </li>
+                                <li>
+                                    <a href="/#servicios">Servicios</a>
+                                    <ul class="sub-menu">
+                                       
+                                        {% for servicio in servicios %}
+                                        <li><a href="{% url 'servicio' servicio.slug %}">{{servicio.nombre}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                               
+                            
+                                <li>
+                                    <a href="#contacto">Contacto</a>
+                                </li>                                         
+                            </ul>                                   
+                        </nav>
+                    </div>
+                    <div class="flat-appointment btn-linear hv-linear-gradient">
+                        <a href="#contacto" class="font-style linear-color border-corner drop-down">Consulta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><!-- header -->
+
+    {% block content %}
+    <div class="flat-slider clearfix">
+        <div class="rev_slider_wrapper fullwidthbanner-container">
+            <div id="rev-slider1" class="rev_slider fullwidthabanner">
+                <ul>
+                    <!-- Slide 1 -->
+                    <li data-transition="random">
+                        <!-- Main Image -->
+                        <img src="{% static 'images/rev-slider/05.jpg' %}" alt="" data-bgposition="center center" data-no-retina>
+                        <div class="overlay"></div>
+
+                        <!-- Layers -->
+                        <div class="tp-caption tp-resizeme text-white text-one"
+                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['-162','-175','-160','-190']"
+                        data-fontsize="['55','55','35','26']"
+                        data-lineheight="['82','82','50','38']"
+                        data-width="full"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-transform_idle="o:1;"
+                        data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                        data-mask_in="x:0px;y:[100%];" 
+                        data-mask_out="x:inherit;y:inherit;" 
+                        data-start="1000" 
+                        data-splitin="none" 
+                        data-splitout="none" 
+                        data-responsive_offset="on">Servicios IT</div>
+
+                        <div class="tp-caption tp-resizeme text-white text-two"
+                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['-38','-40','-60','-80']"
+                        data-fontsize="['70','70','55','42']"
+                        data-lineheight="['82','82','70','54']"
+                        data-width="full"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-transform_idle="o:1;"
+                        data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                        data-mask_in="x:0px;y:[100%];" 
+                        data-mask_out="x:inherit;y:inherit;" 
+                        data-start="1600" 
+                        data-splitin="none" 
+                        data-splitout="none" 
+                        data-responsive_offset="on">“Transformando ideas <br> en realidades”</div>
+
+                        <div class="tp-caption tp-resizeme text-white btn-three"
+                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['83','80','40','40']"
+                        data-fontsize="['19','19','17','16']"
+                        data-lineheight="['30','30','28','28']"
+                        data-width="full"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-transform_idle="o:1;"
+                        data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                        data-mask_in="x:0px;y:[100%];" 
+                        data-mask_out="x:inherit;y:inherit;" 
+                        data-start="2200" 
+                        data-splitin="none" 
+                        data-splitout="none" 
+                        data-responsive_offset="on">El soporte técnico que necesitas.</div>
+
+                        <div class="tp-caption btn-text btn-linear hv-linear-gradient"
+                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['155','160','120','130']"
+                        data-width="full"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-transform_idle="o:1;"
+                        data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                        data-mask_in="x:0px;y:[100%];" 
+                        data-mask_out="x:inherit;y:inherit;" 
+                        data-start="2800" 
+                        data-splitin="none" 
+                        data-splitout="none" 
+                        data-responsive_offset="on">
+                            <a href="#servicios" class="all-solution font-style linear-color border-corner">Ver servicios<span class="icon-arrow-pointing-to-right"></span></a>
+                         
+                        </div>
+                    </li>
+                    <!-- /End Slide 1 -->
+
+                    <!-- Slide 2 -->
+                    <li data-transition="random">
+                        <!-- Main Image -->
+                        <img src="{% static 'images/rev-slider/01.jpg' %}" alt="" data-bgposition="center center" data-no-retina>
+                        <div class="overlay"></div>
+
+                        <!-- Layers -->
+                        <div class="tp-caption tp-resizeme text-white text-one"
+                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['-162','-175','-160','-190']"
+                        data-fontsize="['55','55','35','26']"
+                        data-lineheight="['82','82','50','38']"
+                        data-width="full"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-transform_idle="o:1;"
+                        data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                        data-mask_in="x:0px;y:[100%];" 
+                        data-mask_out="x:inherit;y:inherit;" 
+                        data-start="1000" 
+                        data-splitin="none" 
+                        data-splitout="none" 
+                        data-responsive_offset="on">Servicios Informáticos</div>
+
+                        <div class="tp-caption tp-resizeme text-white text-two"
+                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['-38','-40','-60','-80']"
+                        data-fontsize="['70','70','55','42']"
+                        data-lineheight="['82','82','70','54']"
+                        data-width="full"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-transform_idle="o:1;"
+                        data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                        data-mask_in="x:0px;y:[100%];" 
+                        data-mask_out="x:inherit;y:inherit;" 
+                        data-start="1600" 
+                        data-splitin="none" 
+                        data-splitout="none" 
+                        
+                        data-responsive_offset="on">Soluciones<br> Digitales.</div>
+
+                        <div class="tp-caption tp-resizeme text-white btn-three"
+                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['83','80','40','40']"
+                        data-fontsize="['19','19','17','16']"
+                        data-lineheight="['30','30','28','28']"
+                        data-width="full"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-transform_idle="o:1;"
+                        data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                        data-mask_in="x:0px;y:[100%];" 
+                        data-mask_out="x:inherit;y:inherit;" 
+                        data-start="2200" 
+                        data-splitin="none" 
+                        data-splitout="none" 
+                        data-responsive_offset="on">El soporte técnico que te mereces.</div>
+
+                        <div class="tp-caption btn-text btn-linear hv-linear-gradient"
+                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['155','160','120','130']"
+                        data-width="full"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-transform_idle="o:1;"
+                        data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                        data-mask_in="x:0px;y:[100%];" 
+                        data-mask_out="x:inherit;y:inherit;" 
+                        data-start="2800" 
+                        data-splitin="none" 
+                        data-splitout="none" 
+                        data-responsive_offset="on">
+                            <a href="#servicios" class="all-solution font-style linear-color border-corner">Ver Servicios<span class="icon-arrow-pointing-to-right"></span></a>
+                         
+                        </div>
+                    </li>
+                    <!-- /End Slide 2 -->
+                </ul>
+            </div>
+        </div>
+    </div><!-- flat-slider -->
+    <section class="features flat-row">
+        <div class="container d-lg-flex">
+            <div class="iconbox-features hv-background-before">
+                <div class="iconbox-icon"><span class="icon-shield"></span></div>
+                <div class="iconbox-content">
+                    <h3 class="title">Protege tu negocio</h3>
+                    <p>
+                        Nuestros servicios de seguridad informática incluyen evaluaciones de seguridad, implementación de medidas de protección y formación en seguridad para empleados...
+                    </p>
+                    <div class="discover-more">
+                        <a href="{% url 'servicio' 'ciberseguridad' %}">Descubre más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="iconbox-features hv-background-before active">
+                <div class="iconbox-icon"><span class="icon-optimization"></span></div>
+                <div class="iconbox-content">
+                    <h3 class="title">Optimiza tu negocio</h3>
+                    <p>
+                        Nos dedicamos a ofrecer soluciones de la más alta calidad, respaldadas por rigurosas pruebas de calidad y un compromiso inquebrantable con la excelencia técnica...
+                    </p>
+                    <div class="discover-more">
+                        <a href="#servicios">Descubre más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="iconbox-features hv-background-before">
+                <div class="iconbox-icon"><span class="icon-alarm"></span></div>
+                <div class="iconbox-content">
+                    <h3 class="title">Presencia Digital</h3>
+                    <p>
+                        Ofrecemos una amplia gama de servicios de marketing digital, incluyendo publicidad en línea, marketing de contenidos, redes sociales y más...
+                    </p>
+                    <div class="discover-more">
+                        <a href="{% url 'servicio' 'marketing-digital' %}">Descubre más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- features -->
+    <section class="who-we-are who-we-are-style1">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-5 col-12">
+                    <div class="featured-post position-relative">
+                        <div class="entry-image">
+                            <img src="{% static 'images/home1/01.jpg' %}" alt="images">
+                        </div>
+                        <div class="iconbox-award">
+                            <span class="icon-support"></span>
+                            <div class="spinning-circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12">
+                    <div class="flat-spacer" data-desktop="0" data-sdesktop="0" data-mobi="50" data-smobi="50"></div>
+                    <div class="content">
+                        <blockquote>
+                            Nos dedicamos a proporcionar soluciones informáticas innovadoras y de alta calidad para satisfacer 
+                            las necesidades tecnológicas de nuestros clientes. Nuestra misión es ofrecer servicios y productos 
+                            que impulsen eléxito empresarial mediante el uso efectivo de la tecnología.                        </blockquote>
+                        
+                        <p>
+                            GEEK es una empresa con aspiraciones a ser líder en el sector de la tecnología con sede en la ciudad de
+                                Malabo, Guinea Ecuatorial. Nos especializamos en el desarrollo de software y web personalizado,
+                                soluciones de inteligencia artificial, análisis de datos y servicios de consultoría tecnológica para empresas
+                                de todos los tamaños, y servicios de mantenimiento informático
+                        </p>
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </section><!-- who-we-are -->
+    <section class="fact-type2">
+        <div class="container d-flex justify-content-lg-around justify-content-center flex-lg-nowrap flex-wrap">
+            <div class="counter counter-type2">
+                <div class="content-counter hv-background-before">
+                    <div class="icon-count"><span class="icon-team"></span></div>
+                    <div class="numb-count-wrap">
+                        <span class="numb-count" data-from="0" data-to="16" data-speed="2000" data-inviewport="yes">16</span>
+                        <span class="numb-plus">+</span>
+                    </div>
+                    <div class="name-count">Clientes Satisfechos</div>
+                </div>
+            </div>
+            <div class="counter counter-type2">
+                <div class="content-counter hv-background-before">
+                    <div class="icon-count"><span class="icon-portfolio"></span></div>
+                    <div class="numb-count-wrap">
+                        <span class="numb-count" data-from="0" data-to="9" data-speed="2000" data-inviewport="yes">9</span>
+                    </div>
+                    <div class="name-count">Proyectos en marcha</div>
+                </div>
+            </div>
+            
+       
+        </div>
+    </section><!-- fact -->
+    <section class="cta-type2 parallax3 " style="background-image: url('{% static 'images/parallax/programming-background-with-person-working-with-codes-computer.jpg' %}');">
+        <div class="section-overlay"></div>
+        <div class="container position-relative text-center" >
+            <div class="cta-content position-relative">
+                <div class="icon"><span class="icon-support"></span></div>
+                <div class="f-text text-white">¿estás listo para tener un negocio</div>
+                <div class="s-text text-white">Más productivo?</div>
+                <div class="flat-contact-now btn-linear hv-linear-gradient">
+                    <a href="#contacto" class="font-style linear-color border-corner">Contáctanos<span class="icon-arrow-pointing-to-right"></span></a>
+                </div>
+            </div>
+            <div class="circle-border circle-border1 none-767"></div>
+            <div class="circle-border circle-border2 none-767"></div>
+            <div class="circle-border circle-border3 none-767"></div>
+        </div>
+    </section><!-- cta -->
+    <div class="flat-it-services flat-it-services-style1" id="servicios" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">
+        <div class="container">
+            <div class="title-section text-center">
+                <p class="sub-title">Nuestros Servicios</p>
+                <h2 class="flat-title">Basados en la Calidad y Confianza.<br> La Flexibilidad y la Agilidad</h2>
+            </div>
+            <div class="row">
+                {% for servicio in servicios %}
+                <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="service-image-box2 hv-background-before">
+                        <div class="order-number">0{{forloop.counter}}.</div>
+                        <div class="featured-post">
+                            <div class="">
+                                <img src="{{servicio.icono.url}}" alt="images" style="width: 100px; height: 100px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="content-service">
+                            <h3 class="title"><a href="#">{{servicio.nombre}}</a></h3>
+                            <div class="link-arrow"><a href="{% url 'servicio' servicio.slug %}"><span class="icon-arrow-pointing-to-right"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div><!-- flat-it-services -->
+    <div class="background-two-section">
+       
+        <div class="flat-case-study flat-case-study-type1 flat-case-study-style1">
+            <div class="container">
+                <div class="title-section text-center">
+                    <p class="sub-title">Nuestras</p>
+                    <h2 class="flat-title text-white">Ventajas competitivas</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 wow fadeInLeft" data-wow-delay="200ms">
+                        <div class="flat-case-service2">
+                            <div class="featured-post position-relative">
+                                <div class="entry-image">
+                                    <img src="{% static 'images/services/21.jpg' %}" alt="images">
+                                </div>
+                                <span></span>
+                            </div>
+                            <div class="case-content text-center">
+                                <h3 class="title"><a href="#" data-toggle="modal" data-target="#exampleModalCenter"> Enfoque Personalizado</a></h3>
+                                <div class="link-arrow"><a href="#"  data-toggle="modal" data-target="#exampleModalCenter"><span class="icon-arrow-pointing-to-right"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+          <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="flat-case-service2">
+                            <div class="featured-post position-relative">
+                                <div class="entry-image">
+                                    <img src="{% static 'images/services/22.jpg' %}" alt="images">
+                                </div>
+                                <span></span>
+                            </div>
+                            <div class="case-content text-center">
+                                <h3 class="title"><a href="#" data-toggle="modal" data-target="#exampleModalCenter1">Equipo de expertos </a></h3>
+                                <div class="link-arrow"><a href="#" data-toggle="modal" data-target="#exampleModalCenter1"><span class="icon-arrow-pointing-to-right"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 wow fadeInRight" data-wow-delay="200ms">
+                        <div class="flat-case-service2">
+                            <div class="featured-post position-relative">
+                                <div class="entry-image">
+                                    <img src="{% static 'images/services/23.jpg' %}" alt="images">
+                                </div>
+                                <span></span>
+                            </div>
+                            <div class="case-content text-center">
+                                <h3 class="title"><a href="#" data-toggle="modal" data-target="#exampleModalCenter2">Versatilidad y Multilenguaje</a></h3>
+                                <div class="link-arrow"><a href="#" data-toggle="modal" data-target="#exampleModalCenter2"><span class="icon-arrow-pointing-to-right"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- flat-case-study -->
+    </div><!-- background-two-section -->
+    <section class="testimonial testimonial-style1">
+        <div class="container">
+            <div class="title-section text-center">
+               
+                <h2 class="flat-title">Lo que dicen<br> Nuestros clientes</h2>
+            </div>
+            <div class="custom-nav-testimonial">
+                <div class="banners-z">
+                    <div class="flat-carousel-box data-effect clearfix" data-zero="0" data-gap="30" data-column="2" data-column2="1" data-column3="1" data-column4="1" data-column5="1" data-dots="false" data-auto="false" data-nav="false" data-loop="true">
+                        <div class="owl-carousel">
+                            <div class="testimonial-box testimonial-box-type1 position-relative">
+                                <div class="endorser d-sm-flex align-items-center">
+                                    <div class="avatar"><img src="{% static 'images/testimonial/02.jpg' %}" alt="images"></div>
+                                    <div class="info">
+                                        <h3 class="name">Marcos Ondo</h3>
+                                        <p class="role">Director de Marketing de Yolo</p>
+                                    </div>
+                                </div>
+                                <div class="flat-spacer" data-desktop="26" data-sdesktop="26" data-mobi="15" data-smobi="15"></div>
+                                <div class="content-testimonial">
+                                    <div class="text-bold">
+                                        Estoy asombrado por el profesionalismo y la dedicación del equipo de Geeks. 
+                                    </div>
+                                    <p>
+                                        "Me ayudaron a llevar mi negocio en línea con un sitio 
+                                        web impresionante que no solo es visualmente atractivo, sino también altamente funcional. Su atención al detalle y capacidad para comprender 
+                                        mis necesidades comerciales fueron excepcionales. 
+                                        ¡Recomendaría a Geeks a cualquier persona que busque llevar su presencia en línea al siguiente nivel!"                                     </p>
+                                </div>
+                                <div class="spinning-circle"></div>
+                                <div class="icon-represent"><span class="icon-trophy"></span></div>
+                            </div>
+                            <div class="testimonial-box testimonial-box-type1 position-relative">
+                                <div class="endorser d-sm-flex align-items-center">
+                                    <div class="avatar"><img src="{% static 'images/testimonial/03.jpg' %}" alt="images"></div>
+                                    <div class="info">
+                                        <h3 class="name">Hugo Lopez Obama</h3>
+                                        <p class="role">CEO de Parko</p>
+                                    </div>
+                                </div>
+                                <div class="flat-spacer" data-desktop="26" data-sdesktop="26" data-mobi="15" data-smobi="15"></div>
+                                <div class="content-testimonial">
+                                    <div class="text-bold">
+                                        Geeks hizo un trabajo increíble al crear nuestro sitio web desde cero. 
+                                    </div>
+                                    <p>
+                                        "Desde el diseño hasta la implementación, su equipo demostró un alto nivel de experiencia y creatividad.
+                                         Nos guiaron a través de cada paso del proceso y nos brindaron soluciones personalizadas que realmente resaltaron nuestra marca. Estamos
+                                         encantados con los resultados y continuamos recibiendo elogios de nuestros clientes por nuestro sitio web renovado. ¡Gracias, Geeks, por hacer realidad nuestra visión en línea!"                                     </p>
+                                </div>
+                                <div class="spinning-circle"></div>
+                                <div class="icon-represent"><span class="icon-trophy"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- testimonial -->
+
+    {% endblock content %}
+  
+    <!-- contacto -->
+    <div class="contact flat-row-half" id="contacto">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="get-in-touch get-in-touch-type1">
+                        {% for i in info %}
+                        <div class="text-contact">No dudes en contactarnos <a href="tel:{{i.telefono}}">para cualquier información.</a></div>
+                        {% endfor %}
+                        <div class="info-contact">
+                            {% for i in info %}
+                            <p>{{i.telefono}} &nbsp;<i class="fa fa-whatsapp"></i>&nbsp;<i class="fa fa-phone"></i></p>
+                            <p>{{i.email}}</p>
+                            <p>{{i.web}}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    
+                </div>
+            </div>
+        </div>
+    </div><!-- contact -->
+
+    <footer id="footer" class="footer footer-bg-3">
+        <div class="overlay"></div>
+        <div id="bottom" class="bottom-type3 position-relative mt-4">
+            <div class="container">
+                <div class="bottom-wrap text-center">
+                    <div id="copyright">
+                        <p>© 2024 Geeks - desarrollado por <a href="https://www.antonioebangcv.com" target="_blank" style="color: white;">Antonio Ebang <i class="fa fas fa-link"></i></a></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a id="scroll-top" class="show"></a>
+    </footer><!-- footer -->
+
+    <script src="{% static 'javascript/jquery.min.js' %}"></script>
+    <script src="{% static 'javascript/parallax.js' %}"></script>
+    <script src="{% static 'javascript/plugins.js' %}"></script>
+    <script src="{% static 'javascript/jquery-ui.js' %}"></script>
+   
+    <script src="{% static 'javascript/jquery-isotope.js' %}"></script>
+    <script src="{% static 'javascript/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'javascript/equalize.min.js' %}"></script>
+    <script src="{% static 'javascript/jquery-fancybox.js' %}"></script>
+    <script src="{% static 'javascript/jquery-countTo.js' %}"></script>
+    <script src="{% static 'javascript/flex-slider.min.js' %}"></script>
+    <script src="{% static 'javascript/wow.min.js' %}"></script>
+    <script src="{% static 'javascript/jquery-validate.js' %}"></script>
+    <script src="{% static 'javascript/main.js' %}"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+    AOS.init();
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+        })
+    </script>
+    <!-- slider -->
+    <script src="{% static 'rev-slider/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'rev-slider/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'javascript/rev-slider.js' %}"></script>
+
+    <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
+    <script src="{% static 'rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js' %}"></script>
+    <script src="{% static 'rev-slider/js/extensions/extensionsrevolution.extension.carousel.min.js' %}"></script>
+    <script src="{% static 'rev-slider/js/extensions/extensionsrevolution.extension.kenburn.min.js' %}"></script>
+    <script src="{% static 'rev-slider/js/extensions/extensionsrevolution.extension.layeranimation.min.js' %}"></script>
+    <script src="{% static 'rev-slider/js/extensions/extensionsrevolution.extension.migration.min.js' %}"></script>
+    <script src="{% static 'rev-slider/js/extensions/extensionsrevolution.extension.navigation.min.js' %}"></script>
+    <script src="{% static 'rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js' %}"></script>
+    <script src="{% static 'rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js' %}"></script>
+    <script src="{% static 'rev-slider/js/extensions/extensionsrevolution.extension.video.min.js' %}"></script>
+</body>
+</html>
+
+    
